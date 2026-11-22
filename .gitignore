@@ -1,0 +1,24 @@
+# Secrets
+.env
+
+# Environments and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Mock and test output, never results
+scratch/
+
+# Claude Code local settings
+.claude/
+
+# Publication PDFs (review PNGs are committed)
+outputs/figures/*.pdf
+
+# Operating system
+.DS_Store
