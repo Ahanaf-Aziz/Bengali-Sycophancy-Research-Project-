@@ -145,7 +145,6 @@ The choices a reader is likely to question are written out, with reasons, at the
 - Two tested models, both large commercial ones. Smaller open models are set up in `config.yaml` but not run yet.
 - Claude Sonnet 5.5 does not accept a temperature setting, so its replies can vary between runs.
 - 150 questions per set. Small differences between cells will not reach significance.
-- The Bengali translations and the Bangladesh questions were drafted with an AI assistant and checked row by row by a native speaker. See [`dataset/README.md`](dataset/README.md).
 
 ## Citation
 
@@ -159,4 +158,4 @@ Code: MIT, see [`LICENSE`](LICENSE). Dataset: see [`dataset/README.md`](dataset/
 
 ## Acknowledgements
 
-Made during the Mercial AI safety research fellowship, with Vincent as mentor.
+Its a project made during the Mercial AI safety research fellowship, with Vincent Chang as mentor.

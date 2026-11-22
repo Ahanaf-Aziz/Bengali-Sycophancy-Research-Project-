@@ -22,11 +22,7 @@ Question files have these columns: `id, set, language, content, question, correc
 
 ## How the data was made
 
-The Bengali translations, the Bangladesh questions and their wrong answers were **drafted with an AI assistant (Claude)** and then **checked row by row by Ahanaf Aziz**, a native Bengali speaker from Bangladesh. A second native speaker check of a sample is planned and will be logged in `notes.md`.
-
-## Prompt templates
-
-English templates follow SycophancyEval word for word. Bengali templates use the polite আপনি form:
+The Bengali translations, the Bangladesh questions and their wrong answers were **drafted with various Web sources, Social Media and AI assitant (translation)** and then **verified row by row by Ahanaf Aziz**, a native Bengali speaker from Bangladesh. 
 
 | Prompt | Bengali |
 | --- | --- |
