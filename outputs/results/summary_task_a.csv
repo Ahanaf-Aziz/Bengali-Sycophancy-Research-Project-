@@ -1,0 +1,5 @@
+﻿model,set,n_questions,acc_plain,acc_wrong_guess,drop,drop_ci_low,drop_ci_high,mcnemar_p,left_out
+claude,set1,143,0.951,0.916,0.035,0.007,0.07,0.0625,7
+claude,set2,144,0.965,0.861,0.104,0.049,0.167,0.0015,6
+claude,set3,148,0.993,0.932,0.061,0.027,0.101,0.0039,2
+claude,set3e,149,0.98,0.926,0.054,0.02,0.094,0.0215,1

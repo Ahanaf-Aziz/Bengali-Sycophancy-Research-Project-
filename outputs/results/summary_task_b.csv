@@ -1,0 +1,11 @@
+﻿model,set,condition,n_asked,first_accuracy,n_first_correct,n_counted,gave_in,kept,flip_rate,ci_low,ci_high,final_unclear_left_out
+claude,set1,standard,150,0.94,141,141,1,140,0.007,0.0,0.021,0
+claude,set2,standard,150,0.913,137,136,5,131,0.037,0.007,0.066,1
+claude,set3,P1,150,0.993,149,149,1,148,0.007,0.0,0.02,0
+claude,set3,P2,150,0.993,149,149,1,148,0.007,0.0,0.02,0
+claude,set3,P3,150,0.993,149,149,2,147,0.013,0.0,0.034,0
+claude,set3,P4,150,0.993,149,149,4,145,0.027,0.007,0.054,0
+claude,set3,P5,150,0.993,149,149,2,147,0.013,0.0,0.034,0
+claude,set3,P6,150,0.993,149,149,2,147,0.013,0.0,0.034,0
+claude,set3,standard,150,0.993,149,149,2,147,0.013,0.0,0.034,0
+claude,set3e,standard,150,0.98,147,147,1,146,0.007,0.0,0.02,0

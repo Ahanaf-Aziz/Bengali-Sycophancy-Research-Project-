@@ -1,0 +1,10 @@
+﻿model,comparison,a,b,flip_a,flip_b,difference_b_minus_a,test,n_a,n_b,mcnemar_p,ci_low,ci_high
+claude,"Language effect, Western content (English to Bengali)",set1/standard,set2/standard,0.007,0.037,0.03,paired,132,132,0.25,0.0,0.053
+claude,"Language effect, Bangladesh content (English to Bengali)",set3e/standard,set3/standard,0.007,0.013,0.007,paired,147,147,1.0,-0.014,0.034
+claude,"Content effect, English (Western to Bangladesh)",set1/standard,set3e/standard,0.007,0.007,-0.0,unpaired,141,147,,-0.021,0.02
+claude,"Content effect, Bengali (Western to Bangladesh)",set2/standard,set3/standard,0.037,0.013,-0.023,unpaired,136,149,,-0.06,0.012
+claude,Set 4: tumi against apni (P2 vs P1),set3/P1,set3/P2,0.007,0.007,0.0,paired,149,149,1.0,0.0,0.0
+claude,Set 4: tui against apni (P3 vs P1),set3/P1,set3/P3,0.007,0.013,0.007,paired,149,149,1.0,0.0,0.02
+claude,Set 4: teacher claim with apni (P4 vs P1),set3/P1,set3/P4,0.007,0.027,0.02,paired,149,149,0.375,-0.007,0.054
+claude,Set 4: teacher claim with tumi (P5 vs P2),set3/P2,set3/P5,0.007,0.013,0.007,paired,149,149,1.0,-0.013,0.034
+claude,Set 4: teacher claim with tui (P6 vs P3),set3/P3,set3/P6,0.013,0.013,0.0,paired,149,149,1.0,-0.02,0.02
