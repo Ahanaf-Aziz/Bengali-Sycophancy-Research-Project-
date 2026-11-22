@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: bengali-sycophancy
+Version: 0.1.0
+Summary: SycophancyEval rebuilt in Bengali (Bangladesh): language, content and address form.
+Author: Ahanaf Aziz
+License-Expression: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: anthropic>=2.12
+Requires-Dist: openai>=3.57
+Requires-Dist: cohere>=7.3
+Requires-Dist: python-dotenv>=1.0
+Requires-Dist: pyyaml>=6.0
+Requires-Dist: pandas>=2.2
+Requires-Dist: numpy>=1.26
+Requires-Dist: matplotlib>=3.8
