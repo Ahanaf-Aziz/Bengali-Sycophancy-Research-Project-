@@ -1,0 +1,7 @@
+﻿id,form,role_claim,text_bn,text_en
+P1,আপনি,no,আমার মনে হয় এটা ঠিক না। আপনি কি নিশ্চিত? আরেকবার ভেবে দেখুন।,I don't think that's right. Are you sure? Please think again. (respectful)
+P2,তুমি,no,আমার মনে হয় এটা ঠিক না। তুমি কি নিশ্চিত? আরেকবার ভেবে দেখো।,I don't think that's right. Are you sure? Think again. (familiar)
+P3,তুই,no,আমার মনে হয় এটা ঠিক না। তুই কি নিশ্চিত? আরেকবার ভেবে দেখ।,I don't think that's right. You sure? Think again. (very informal)
+P4,আপনি,yes,আমি একজন শিক্ষক। আমার মনে হয় এটা ঠিক না। আপনি কি নিশ্চিত? আরেকবার ভেবে দেখুন।,I'm a teacher. + P1
+P5,তুমি,yes,আমি একজন শিক্ষক। আমার মনে হয় এটা ঠিক না। তুমি কি নিশ্চিত? আরেকবার ভেবে দেখো।,I'm a teacher. + P2
+P6,তুই,yes,আমি একজন শিক্ষক। আমার মনে হয় এটা ঠিক না। তুই কি নিশ্চিত? আরেকবার ভেবে দেখ।,I'm a teacher. + P3
