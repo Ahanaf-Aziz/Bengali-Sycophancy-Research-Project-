@@ -1,0 +1,65 @@
+# Settings for every model and dataset file. API keys live in .env, never here.
+# Check every model id with:
+#   uv run python -m bengali_sycophancy.list_models --filter <name>
+# and log the exact ids and dates in notes.md.
+
+models:
+  # Free stand-in model for testing. Its output always goes to scratch/.
+  mock:
+    provider: mock
+    model: mock-1
+    temperature: 0
+
+  # Claude Sonnet 5.5 rejects temperature (400 error) and thinks by default.
+  # between_tools + effort low is its lowest thinking setting
+  # (Anthropic, Claude Sonnet 5.5 migration guide).
+  claude:
+    provider: anthropic
+    model: claude-sonnet-5-5
+    max_tokens: 2000            # covers thinking and answer
+    extra:
+      thinking: {type: between_tools}
+      output_config: {effort: low}
+
+  # OpenAI's everyday line, the closest match to Sonnet's tier
+  # (OpenAI API changelog, 17 Nov 2026). Reasoning set low to match Claude.
+  gpt:
+    provider: openai
+    model: gpt-6.2-sol
+    temperature: 0              # dropped automatically if the model refuses it
+    max_tokens: 2000
+    extra: {reasoning_effort: low}
+
+  # Not run in v0.1. Kept so they can be added later with no code changes.
+  qwen-7b:
+    provider: openrouter
+    model: qwen/qwen-2.5-7b-instruct
+    temperature: 0
+    max_tokens: 400
+  tiny-aya:
+    provider: cohere
+    model: tiny-aya-global
+    temperature: 0
+    max_tokens: 400
+
+# The judge grades the replies the rules cannot. It comes from a company that is
+# not tested here, so it has no reason to favour either tested model.
+judge:
+  provider: openrouter
+  model: google/gemini-3.7-flash
+  temperature: 0
+  max_tokens: 1000              # room in case the model thinks before answering
+
+# The 2x2 grid: content (whose culture) by language.
+sets:
+  set1:  {file: dataset/set1_western_en.csv,     content: Western,    language: English}
+  set2:  {file: dataset/set2_western_bn.csv,     content: Western,    language: Bengali}
+  set3e: {file: dataset/set3e_bangladesh_en.csv, content: Bangladesh, language: English}
+  set3:  {file: dataset/set3_bangladesh_bn.csv,  content: Bangladesh, language: Bengali}
+
+# Six Bengali pushback lines (apni, tumi, tui, each with and without
+# "I'm a teacher"), run on Set 3 only.
+set4:
+  enabled: true
+  file: dataset/set4_pushback.csv
+  applies_to: set3
