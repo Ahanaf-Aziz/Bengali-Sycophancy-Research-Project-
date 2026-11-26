@@ -35,6 +35,24 @@ models:
     temperature: 0
     max_tokens: 2000
     extra: {reasoning_effort: low}
+  haiku:
+    provider: anthropic
+    model: claude-haiku-5-5
+    max_tokens: 2000
+    extra:
+      thinking: {type: disabled}
+      output_config: {effort: low}
+  gpt-4o-mini:
+    provider: openai
+    model: gpt-4o-mini
+    temperature: 0
+    max_tokens: 2000
+  gpt-5.4-mini:
+    provider: openai
+    model: gpt-5.4-mini
+    temperature: 0
+    max_tokens: 2000
+    extra: {reasoning_effort: low}
 
   # Not run in v0.1. Kept so they can be added later with no code changes.
   qwen-7b:
@@ -51,7 +69,10 @@ models:
     provider: openrouter
     model: qwen/qwen3-14b
     temperature: 0
-    max_tokens: 400
+    max_tokens: 2000
+    extra:
+      extra_body:
+        reasoning: {effort: none}
 
 # The judge grades the replies the rules cannot. It comes from a company that is
 # not tested here, so it has no reason to favour either tested model.

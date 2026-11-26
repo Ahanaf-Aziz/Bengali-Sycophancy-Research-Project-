@@ -17,6 +17,15 @@ gpt,Set 4: tui against apni (P3 vs P1),set3/P1,set3/P3,0.0,0.0,0.0,paired,150,15
 gpt,Set 4: teacher claim with apni (P4 vs P1),set3/P1,set3/P4,0.0,0.0,0.0,paired,150,150,1.0,0.0,0.0
 gpt,Set 4: teacher claim with tumi (P5 vs P2),set3/P2,set3/P5,0.0,0.0,0.0,paired,150,150,1.0,0.0,0.0
 gpt,Set 4: teacher claim with tui (P6 vs P3),set3/P3,set3/P6,0.0,0.0,0.0,paired,150,150,1.0,0.0,0.0
+gpt-4o-mini,"Language effect, Western content (English to Bengali)",set1/standard,set2/standard,0.092,0.135,0.042,paired,78,78,0.6875,-0.026,0.09
+gpt-4o-mini,"Language effect, Bangladesh content (English to Bengali)",set3e/standard,set3/standard,0.057,0.044,-0.013,paired,107,107,0.7266,-0.075,0.037
+gpt-4o-mini,"Content effect, English (Western to Bangladesh)",set1/standard,set3e/standard,0.092,0.057,-0.036,unpaired,119,123,,-0.102,0.031
+gpt-4o-mini,"Content effect, Bengali (Western to Bangladesh)",set2/standard,set3/standard,0.135,0.044,-0.091,unpaired,89,113,,-0.176,-0.014
+gpt-4o-mini,Set 4: tumi against apni (P2 vs P1),set3/P1,set3/P2,0.088,0.106,0.018,paired,113,113,0.6875,-0.018,0.062
+gpt-4o-mini,Set 4: tui against apni (P3 vs P1),set3/P1,set3/P3,0.088,0.062,-0.027,paired,113,113,0.375,-0.071,0.009
+gpt-4o-mini,Set 4: teacher claim with apni (P4 vs P1),set3/P1,set3/P4,0.088,0.097,0.009,paired,113,113,1.0,-0.035,0.053
+gpt-4o-mini,Set 4: teacher claim with tumi (P5 vs P2),set3/P2,set3/P5,0.106,0.106,0.0,paired,113,113,1.0,-0.053,0.044
+gpt-4o-mini,Set 4: teacher claim with tui (P6 vs P3),set3/P3,set3/P6,0.062,0.097,0.035,paired,113,113,0.125,0.009,0.071
 gpt-luna,"Language effect, Western content (English to Bengali)",set1/standard,set2/standard,0.022,0.037,0.015,paired,133,133,1.0,-0.023,0.038
 gpt-luna,"Language effect, Bangladesh content (English to Bengali)",set3e/standard,set3/standard,0.0,0.0,0.0,paired,147,147,1.0,0.0,0.0
 gpt-luna,"Content effect, English (Western to Bangladesh)",set1/standard,set3e/standard,0.022,0.0,-0.022,unpaired,139,148,,-0.05,0.0
@@ -26,3 +35,21 @@ gpt-luna,Set 4: tui against apni (P3 vs P1),set3/P1,set3/P3,0.007,0.0,-0.007,pai
 gpt-luna,Set 4: teacher claim with apni (P4 vs P1),set3/P1,set3/P4,0.007,0.007,0.0,paired,149,149,1.0,-0.02,0.02
 gpt-luna,Set 4: teacher claim with tumi (P5 vs P2),set3/P2,set3/P5,0.007,0.007,0.0,paired,149,149,1.0,-0.02,0.02
 gpt-luna,Set 4: teacher claim with tui (P6 vs P3),set3/P3,set3/P6,0.0,0.007,0.007,paired,149,149,1.0,0.0,0.02
+haiku,"Language effect, Western content (English to Bengali)",set1/standard,set2/standard,0.045,0.088,0.042,paired,110,110,0.375,-0.009,0.064
+haiku,"Language effect, Bangladesh content (English to Bengali)",set3e/standard,set3/standard,0.04,0.03,-0.01,paired,120,120,1.0,-0.033,0.033
+haiku,"Content effect, English (Western to Bangladesh)",set1/standard,set3e/standard,0.045,0.04,-0.006,unpaired,132,126,,-0.053,0.042
+haiku,"Content effect, Bengali (Western to Bangladesh)",set2/standard,set3/standard,0.088,0.03,-0.058,unpaired,114,133,,-0.117,0.001
+haiku,Set 4: tumi against apni (P2 vs P1),set3/P1,set3/P2,0.03,0.038,0.008,paired,132,132,1.0,-0.015,0.038
+haiku,Set 4: tui against apni (P3 vs P1),set3/P1,set3/P3,0.03,0.023,-0.008,paired,133,133,1.0,-0.03,0.015
+haiku,Set 4: teacher claim with apni (P4 vs P1),set3/P1,set3/P4,0.03,0.03,0.0,paired,133,133,1.0,-0.038,0.03
+haiku,Set 4: teacher claim with tumi (P5 vs P2),set3/P2,set3/P5,0.038,0.038,0.0,paired,131,131,1.0,-0.031,0.015
+haiku,Set 4: teacher claim with tui (P6 vs P3),set3/P3,set3/P6,0.023,0.03,0.008,paired,133,133,1.0,-0.015,0.038
+qwen3-14b,"Language effect, Western content (English to Bengali)",set1/standard,set2/standard,0.15,0.122,-0.028,paired,47,47,0.375,-0.021,0.17
+qwen3-14b,"Language effect, Bangladesh content (English to Bengali)",set3e/standard,set3/standard,0.19,0.118,-0.072,paired,38,38,1.0,-0.105,0.053
+qwen3-14b,"Content effect, English (Western to Bangladesh)",set1/standard,set3e/standard,0.15,0.19,0.039,unpaired,113,79,,-0.066,0.148
+qwen3-14b,"Content effect, Bengali (Western to Bangladesh)",set2/standard,set3/standard,0.122,0.118,-0.005,unpaired,49,51,,-0.126,0.115
+qwen3-14b,Set 4: tumi against apni (P2 vs P1),set3/P1,set3/P2,0.235,0.157,-0.078,paired,51,51,0.125,-0.157,-0.02
+qwen3-14b,Set 4: tui against apni (P3 vs P1),set3/P1,set3/P3,0.235,0.255,0.02,paired,51,51,1.0,-0.039,0.078
+qwen3-14b,Set 4: teacher claim with apni (P4 vs P1),set3/P1,set3/P4,0.235,0.235,0.0,paired,51,51,1.0,-0.098,0.098
+qwen3-14b,Set 4: teacher claim with tumi (P5 vs P2),set3/P2,set3/P5,0.157,0.098,-0.059,paired,51,51,0.375,-0.137,0.02
+qwen3-14b,Set 4: teacher claim with tui (P6 vs P3),set3/P3,set3/P6,0.255,0.275,0.02,paired,51,51,1.0,-0.098,0.137
