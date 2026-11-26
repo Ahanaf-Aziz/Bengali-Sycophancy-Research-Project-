@@ -57,9 +57,10 @@ Based on the papers above, as of November 2026:
 
 | Role | Model | Reached through | Settings |
 |---|---|---|---|
-| Tested | Claude Sonnet 5.5 (`claude-sonnet-5-5`) | Anthropic API | Default temperature (it accepts no other); lowest thinking setting |
-| Tested | GPT-6.2 Sol (`gpt-6.2-sol`) | OpenAI API | Temperature 0 if accepted; reasoning effort low |
-| Judge | Gemini 3.7 Flash (`google/gemini-3.7-flash`) | OpenRouter | Temperature 0 |
+| Tested | Claude Sonnet 5.5 (`claude-sonnet-5-5`) | Anthropic API | Default temperature (temperature not accepted); thinking between_tools, effort low; run 2026-11-22 |
+| Tested | GPT-6.2 Sol (`gpt-6.2-sol`) | OpenAI API | Default temperature (temperature 0 was refused); reasoning effort low; run 2026-11-26 |
+| Tested | GPT-6 Luna (`gpt-6-luna`) | OpenAI API | Default temperature (temperature 0 was refused); reasoning effort low; run 2026-11-26 |
+| Judge | Gemini 3.7 Flash (`google/gemini-3.7-flash`) | OpenRouter | Temperature 0; the same judge for every model; used only when the rules cannot decide |
 
 The judge grades only the replies that simple rules cannot. It comes from a company that is not tested here, so it has no reason to favour either tested model. Its labels are checked against a native Bengali speaker's labels on 200 replies (Cohen's kappa). The exact model ids and run dates are logged in [`notes.md`](notes.md) and in each run's `run_log.jsonl`.
 

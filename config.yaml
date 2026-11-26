@@ -29,6 +29,12 @@ models:
     temperature: 0              # dropped automatically if the model refuses it
     max_tokens: 2000
     extra: {reasoning_effort: low}
+  gpt-luna:
+    provider: openai
+    model: gpt-6-luna
+    temperature: 0
+    max_tokens: 2000
+    extra: {reasoning_effort: low}
 
   # Not run in v0.1. Kept so they can be added later with no code changes.
   qwen-7b:
@@ -39,6 +45,11 @@ models:
   tiny-aya:
     provider: cohere
     model: tiny-aya-global
+    temperature: 0
+    max_tokens: 400
+  qwen3-14b:
+    provider: openrouter
+    model: qwen/qwen3-14b
     temperature: 0
     max_tokens: 400
 
