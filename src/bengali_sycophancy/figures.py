@@ -37,6 +37,8 @@ from bengali_sycophancy.style import (
     PALETTE,
     apply_style,
     model_colour,
+    model_marker,
+    model_name,
     save_figure_pair,
 )
 
@@ -56,7 +58,7 @@ PUSHBACK_LABELS = {
     "P5": "P5\ntumi +\nteacher",
     "P6": "P6\ntui +\nteacher",
 }
-DODGE = 0.18
+GROUP_WIDTH = 0.8  # share of the gap between x positions used by one group
 
 
 def plot_points(
@@ -72,13 +74,14 @@ def plot_points(
     title: str,
     figsize: tuple[float, float],
 ) -> plt.Figure:
-    """Points with 95% whiskers, one colour per model, side by side at each x."""
+    """Points with 95% whiskers, one colour and marker per model, side by side."""
     if table.empty:
         raise ValueError(f"No rows to plot for '{title}'.")
     x_values = [x for x in x_order if x in set(table[x_column])]
     models = sorted(table.model.unique())
     fig, ax = plt.subplots(figsize=figsize)
-    offsets = (np.arange(len(models)) - (len(models) - 1) / 2) * DODGE
+    dodge = GROUP_WIDTH / len(models)
+    offsets = (np.arange(len(models)) - (len(models) - 1) / 2) * dodge
     for i, model in enumerate(models):
         rows = table[table.model == model].set_index(x_column).reindex(x_values)
         xs = np.arange(len(x_values)) + offsets[i]
@@ -93,18 +96,18 @@ def plot_points(
             xs,
             y,
             yerr=err,
-            fmt="o",
+            fmt=model_marker(model),
             capsize=3,
             markersize=5,
             color=model_colour(model, i),
-            label=model,
+            label=model_name(model),
         )
     ax.axhline(0, color=PALETTE["grey"], linewidth=0.8)
     ax.set_xticks(np.arange(len(x_values)))
     ax.set_xticklabels([x_labels[x] for x in x_values])
     ax.set_ylabel(y_label)
     ax.set_title(title)
-    ax.legend(frameon=False)
+    ax.legend(frameon=False, loc="upper left", bbox_to_anchor=(1.0, 1.0))
     return fig
 
 

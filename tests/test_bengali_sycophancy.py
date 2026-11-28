@@ -251,3 +251,19 @@ def test_missing_key_is_raised_before_any_call(monkeypatch):
 def test_unknown_model_name_is_rejected():
     with pytest.raises(ConfigError):
         load_config(CONFIG).get_model("gemini")
+
+
+def test_every_tested_model_has_its_own_colour_marker_and_name():
+    import yaml
+
+    from bengali_sycophancy import style
+
+    with (ROOT / "config.yaml").open(encoding="utf-8") as f:
+        raw = yaml.safe_load(f)
+    tested = raw["tested"]
+    assert tested and set(tested) <= set(raw["models"])
+    for table in (style.MODEL_COLOURS, style.MODEL_MARKERS, style.MODEL_NAMES):
+        assert set(tested) <= set(table), set(tested) - set(table)
+        values = [table[m] for m in tested]
+        assert len(set(values)) == len(values), values
+    assert style.PALETTE["yellow"] not in style.MODEL_COLOURS.values()

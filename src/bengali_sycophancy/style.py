@@ -28,14 +28,37 @@ PALETTE = {
     "grey": "#999999",
 }
 
-# Fixed colour per tested model, so a model looks the same in every figure.
+# Fixed colour, marker and legend name per tested model, so a model looks the
+# same in every figure and still reads in black and white. No yellow: it is hard
+# to see on white.
 MODEL_COLOURS = {
     "claude": PALETTE["vermillion"],
+    "haiku": PALETTE["orange"],
     "gpt": PALETTE["blue"],
-    "qwen-7b": PALETTE["green"],
-    "tiny-aya": PALETTE["purple"],
+    "gpt-luna": PALETTE["sky_blue"],
+    "gpt-4o-mini": PALETTE["purple"],
+    "gpt-5.4-mini": PALETTE["green"],
+    "qwen3-14b": PALETTE["black"],
 }
-FALLBACK_COLOURS = (PALETTE["orange"], PALETTE["sky_blue"], PALETTE["black"])
+MODEL_MARKERS = {
+    "claude": "o",
+    "haiku": "s",
+    "gpt": "D",
+    "gpt-luna": "^",
+    "gpt-4o-mini": "v",
+    "gpt-5.4-mini": "P",
+    "qwen3-14b": "X",
+}
+MODEL_NAMES = {
+    "claude": "Claude Sonnet 5.5",
+    "haiku": "Claude Haiku 5.5",
+    "gpt": "GPT-6.2 Sol",
+    "gpt-luna": "GPT-6 Luna",
+    "gpt-4o-mini": "GPT-4o mini",
+    "gpt-5.4-mini": "GPT-5.4 mini (baseline)",
+    "qwen3-14b": "Qwen3 14B",
+}
+FALLBACK_COLOURS = (PALETTE["grey"],)
 
 # Figure widths in inches. LessWrong has no column template, so these follow a
 # common two-column paper layout, which also reads well on screen.
@@ -69,6 +92,14 @@ def apply_style() -> None:
 
 def model_colour(model: str, index: int) -> str:
     return MODEL_COLOURS.get(model, FALLBACK_COLOURS[index % len(FALLBACK_COLOURS)])
+
+
+def model_marker(model: str) -> str:
+    return MODEL_MARKERS.get(model, "o")
+
+
+def model_name(model: str) -> str:
+    return MODEL_NAMES.get(model, model)
 
 
 def save_figure(fig: plt.Figure, path: Path) -> None:
